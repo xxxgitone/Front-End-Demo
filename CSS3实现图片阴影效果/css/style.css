@@ -1,0 +1,50 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: Arial;
+	font-size: 20px;
+}
+ul{
+	list-style: none;
+}
+.warp{
+	width: 70%;
+	height: 200px;
+	margin:50px auto;
+	background: #fff;
+}
+.warp h1{
+	font-size: 20px;
+	line-height: 200px;
+	text-align: center;
+}
+
+	/*前两个为必选参数，可为负值*/
+	/*box-shadow: 水平阴影的位置，垂直阴影的位置，模糊距离，阴影尺寸，颜色，将外部阴影(outset)改为内部阴影(inset)*/
+
+.effect {
+	position: relative;
+	box-shadow:0px 1px 4px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
+	-webkit-box-shadow:0px 1px 4px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
+	-moz-box-shadow:0px 1px 4px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
+	-o-box-shadow:0px 1px 4px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
+}
+
+/*after在被选元素前面插入内容
+before在被选元素后插入内容
+说明：需要使用content属性来指定内容*/
+
+.effect:after,.effect:before{
+	content: '';
+	background: #f00;
+	z-index: -1;
+	position: absolute;
+	top: 50%;
+	bottom: 0;
+	left: 30px;
+	right: 30px;
+	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+	border-radius: 100px/10px; /*水平方向100，垂直方向10*/
+}
