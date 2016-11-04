@@ -41,10 +41,59 @@ before在被选元素后插入内容
 	background: #f00;
 	z-index: -1;
 	position: absolute;
-	top: 50%;
+	top: 50%;   /*也可直接定义长高,这里表示占父容器的50%的位置*/
 	bottom: 0;
 	left: 30px;
 	right: 30px;
 	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
 	border-radius: 100px/10px; /*水平方向100，垂直方向10*/
 }
+
+.box{
+	width: 980px;
+	height: auto;
+	clear: both;
+	overflow: hidden;
+	margin: 20px auto;
+}
+.box li{
+	position: relative;
+	width: 300px;
+	height: 210px;
+	background: #fff;
+	float: left;
+	margin: 20px 10px;
+	border: 2px solid #efefef;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.27),0 0 60px rgba(0,0,0,0.1) inset;
+}
+.box li img{
+	display: block;
+	width: 290px;
+	height: 200px;
+	margin: 5px;
+}
+.box li:after{
+	content: '';
+	position: absolute;
+	z-index: -1;
+	width: 90%;
+	height: 80%;
+	bottom: 8px;
+	left: 20px;
+	background:transparent; /*透明*/
+	box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+	transform: skew(-12deg) rotate(-4deg); /*图形整体向左倾斜12角度,图形整体旋转4度*/
+}
+.box li:before{
+	content: '';
+	position: absolute;
+	z-index: -2;
+	width: 90%;
+	height: 80%;
+	bottom: 8px;
+	right: 20px;
+	background:transparent; /*透明*/
+	box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+	transform: skew(12deg) rotate(4deg); /*图形整体向左倾斜12角度,图形整体旋转4度*/
+}
+
