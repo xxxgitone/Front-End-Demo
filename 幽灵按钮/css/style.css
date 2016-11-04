@@ -1,0 +1,57 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #333;
+}
+.box{
+	width: 800px;
+	height: 280px;
+	margin: 50px auto;
+}
+.box .link{
+	width: 205px;
+	height: 280px;
+	float: left;
+	margin: 0 20px;
+}
+.link .icon{
+	display:block;
+	width: 100%;
+	height: 180px;
+	transition:all 0.3s ease-out;      /*过渡属性,这里定义了全部属性过渡，全部属性all，时间0.2s，方式ease-out*/
+}
+.link-miss .icon{
+	background:url(../images/mission.png) no-repeat center center;
+}
+.link-paly .icon{
+	background:url(../images/play.png) no-repeat center center;
+}
+.link-touch .icon{
+	background:url(../images/touch.png) no-repeat center center;
+}
+
+.link .icon:hover{
+	transform:rotate(360deg) scale(1.2);/*旋转360度，放大1.2倍,*/
+}
+.button{
+	display: block;
+	width: 180px;
+	height: 50px;
+	line-height: 50px;
+	color: #2DCB70;
+	text-decoration: none;
+	font-family: Arial;
+	font-weight: bold;
+	border:2px solid rgba(255,255,255,0.8);
+	padding-left: 20px;
+	margin: 0 auto;
+	box-sizing: border-box; /*不考虑边框宽度和内边距，宽度和高度就是按设置的显示*/
+	background: url(../images/allow.png) no-repeat 130px center;
+	transition:all 0.4s ease;
+}
+.button:hover{
+	border:2px solid rgba(255,255,255,1);
+	background-position: 140px center;   
+}
