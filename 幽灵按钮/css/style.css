@@ -9,6 +9,7 @@ body{
 	width: 800px;
 	height: 280px;
 	margin: 50px auto;
+	position: relative;
 }
 .box .link{
 	width: 205px;
@@ -40,6 +41,7 @@ body{
 	width: 180px;
 	height: 50px;
 	line-height: 50px;
+	position: relative;
 	color: #2DCB70;
 	text-decoration: none;
 	font-family: Arial;
@@ -54,4 +56,87 @@ body{
 .button:hover{
 	border:2px solid rgba(255,255,255,1);
 	background-position: 140px center;   
+}
+.button .line{
+	display: block;
+	position: absolute;
+	background: none;
+	transition:0.4s ease;
+}
+.button:hover .line{
+	background: #fff;
+}
+/*从左到右*/
+.button .line-top{
+	height: 2px;
+	width: 0;
+	left: -110%;
+	top: -2px; 
+}
+.button:hover .line-top{
+	width:100%;
+	left: -2px;
+}
+/*从上到下*/
+.button .line-right{
+	height: 0;
+	width: 2px;
+	right: -2px;
+	top:-110%; 
+}
+.button:hover .line-right{
+	height:100%;
+	top:-2px;
+}
+/*从下到上*/
+.button .line-bottom{
+	height: 0;
+	width: 2px;
+	left: -2px;
+	bottom:-110%; 
+}
+.button:hover .line-bottom{
+	height:100%;
+	bottom:-2px;
+}
+/*从右到左*/
+.button .line-left{
+	height: 2px;
+	width: 0;
+	right: -110%;
+	bottom:-2px; 
+}
+.button:hover .line-left{
+	width:100%;
+	right:-2px;
+}
+
+.tip{
+	position: absolute;
+	padding: 0 14px;
+	height: 35px;
+	line-height: 35px;
+	background: #2DCB70;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 3px;
+	margin: 0 auto;
+	top: 100px;
+	opacity: 0;
+}
+.tip em{
+	font-style: normal;
+}
+/*提示三角形*/
+.tip span{
+	display: block;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border: 7px solid transparent;
+	border-top-color: #2DCB70;  /*bottom向下的三角形，向左，向右类似*/
+	position: absolute;
+	top: 35px;
+	left: 50%;
+	margin-left: -3px;
 }
