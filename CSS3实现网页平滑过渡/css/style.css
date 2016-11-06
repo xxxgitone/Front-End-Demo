@@ -1,0 +1,88 @@
+body{
+	font-family: Georgia,serif;
+	background: #ddd;
+	font-weight: 400;
+	font-size: 15px;
+	color: #333;
+	overflow: hidden;
+	font-smoothing:antialiased; /*设置字体的抗锯齿或者平滑度的属性,一帮用于英文字体*/
+}
+a{
+	text-decoration: none;
+	color: #555;
+}
+/*清除浮动的类*/
+.clr{
+	width:0;
+	height: 0;
+	overflow: hidden;
+	clear: both;
+	padding: 0;
+	margin: 0;
+}
+
+.st-contains{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-family: "Josefin Slab","Myriad Pro",Arial,sans-serif;
+}
+.st-contains > input,
+.st-contains > a{
+	width: 20%;
+	height: 34px;
+	line-height: 34px;
+	position: fixed;
+	bottom: 0;
+}
+.st-contains > input{
+	opacity: 0;/*隐藏*/
+	z-index: 2;
+}
+.st-contains > a{
+	z-index: 1;
+	font-weight: 700;
+	font-size:16px;
+	background: #e23a6e;
+	text-align: center;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
+}
+#st-control-1,#st-control-1 + a{/*后面的a*/
+	left: 0%;
+}
+#st-control-2,#st-control-2 + a{/*后面的a*/
+	left: 20%;
+}
+#st-control-3,#st-control-3 + a{/*后面的a*/
+	left: 40%;
+}
+#st-control-4,#st-control-4 + a{/*后面的a*/
+	left: 60%;
+}
+#st-control-5,#st-control-5 + a{/*后面的a*/
+	left: 80%;
+}
+
+.st-contains input:checked + a,
+.st-contains input:checked:hover+a{/*被选中的input后面的a,被选中的后面的a划过颜色不用变，跟选中的颜色一样*/
+	background: #821134;
+}
+
+.st-contains input:checked + a:after{
+	content: '';
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border: 20px solid transparent;
+	border-bottom-color: #821134;
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -20px;
+}
+.st-contains input:hover+a{
+	background: #AD244f;
+}
