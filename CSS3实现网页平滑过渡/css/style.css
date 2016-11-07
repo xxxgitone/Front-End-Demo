@@ -1,3 +1,14 @@
+/*字体制作图标,导入字体*/
+@font-face{
+	font-family: "Raphaelicons";
+	src:url("../fonts/raphaelicons-webfont.eot") format("eot"),
+		url("../fonts/raphaelicons-webfont.ttf") format("truetype"),
+		url("../fonts/raphaelicons-webfont.svg") format("svg"),
+		url("../fonts/raphaelicons-webfont.woff") format("woff");
+	font-weight:normal;
+	font-style: normal;
+}
+
 body{
 	font-family: Georgia,serif;
 	background: #ddd;
@@ -36,6 +47,7 @@ a{
 	line-height: 34px;
 	position: fixed;
 	bottom: 0;
+	cursor: pointer;
 }
 .st-contains > input{
 	opacity: 0;/*隐藏*/
@@ -85,4 +97,174 @@ a{
 }
 .st-contains input:hover+a{
 	background: #AD244f;
+}
+
+
+/*内容*/
+
+.st-scroll,
+.st-panel{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.st-scroll{
+	left: 0;
+	top: 0;
+	transform: translate3d(0,0,0);
+	transition: all 0.6s ease-in-out;
+	backface-visibility: hidden;/*定义当元素不面向屏幕时是否可见，visible：背面可见；hidden：背面不可见*/
+}
+.st-panel{
+	background: #fff;
+	overflow: hidden;
+}
+
+#st-control-1:checked ~ .st-scroll{/*不能使用+，~表示在它后面，不一定是紧跟在它后面.但要是并列关系*/
+	transform: translateY(0%);
+}
+
+#st-control-2:checked ~ .st-scroll{
+	transform: translateY(-100%);
+}
+#st-control-3:checked ~ .st-scroll{
+	transform: translateY(-200%);
+}
+#st-control-4:checked ~ .st-scroll{
+	transform: translateY(-300%);
+}
+#st-control-5:checked ~ .st-scroll{
+	transform: translateY(-400%);
+}
+
+/*三角形，矩形变形*/
+.st-desc{
+	width: 200px;
+	height: 200px;
+	background: #fa96b5;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -100px;
+	transform: translateY(-50%) rotate(45deg);
+}
+
+/*图标*/
+/*属性选择器*/
+[data-icon]:after{
+	content: attr(data-icon);
+	width: 200px;
+	height: 200px;
+	color: #fff;
+	font-size: 90px;
+	text-align: center;
+	line-height: 200px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: rotate(-45deg) translateY(25%);
+	margin: -100px 0 0 -100px;
+	font-family: "Raphaelicons";
+	text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
+}
+
+.st-panel h2{
+	color: #e23a6e;
+	font-size: 54px;
+	line-height: 50px;
+	text-align: center;
+	font-weight: 900;
+	width: 80%;
+	position: absolute;
+	left: 10%;
+	top: 50%;
+	margin-top: -70px;
+	text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
+}
+
+/*h2的动画*/
+/*transition和animation动画的选择，如果需要触发（点击，划过）事件，则使用前者，不需要使用后者*/
+
+#st-control-1:checked ~ .st-scroll #st-panel-1 h2,
+#st-control-2:checked ~ .st-scroll #st-panel-2 h2,
+#st-control-3:checked ~ .st-scroll #st-panel-3 h2,
+#st-control-4:checked ~ .st-scroll #st-panel-4 h2,
+#st-control-5:checked ~ .st-scroll #st-panel-5 h2{
+	animation: moveDown 0.6s ease-in-out 0.2s backwards;
+}
+
+@keyframes moveDown{
+	0%{
+		transform: translateY(-40px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.st-panel p{
+	position: absolute;
+	width: 50%;
+	left: 25%;
+	top: 50%;
+	font-size: 16px;
+	line-height: 22px;
+	padding: 0;
+	text-align: center;
+	backface-visibility: hidden;
+	color: #8b8b8b;
+	margin-top: 10px;
+}
+
+#st-control-1:checked ~ .st-scroll #st-panel-1 p,
+#st-control-2:checked ~ .st-scroll #st-panel-2 p,
+#st-control-3:checked ~ .st-scroll #st-panel-3 p,
+#st-control-4:checked ~ .st-scroll #st-panel-4 p,
+#st-control-5:checked ~ .st-scroll #st-panel-5 p{
+	animation: moveUp 0.6s ease-in-out 0.2s backwards;
+}
+
+@keyframes moveUp{
+	0%{
+		transform: translateY(40px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.st-color{
+	background: #fb96b5;
+}
+.st-color .st-desc{
+	background: #fff;
+}
+.st-color [data-icon]:after{
+	color: #fb96b5;
+}
+.st-color h2{
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+.st-color p{
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 520px) {
+	.st-panel h2{
+		font-size: 42px;
+	}
+	.st-panel p{
+		width: 90%;
+		left: 10%;
+		margin-top: 0;
+	}
+	.st-container > a{
+		font-size: 13px;
+	}
 }
