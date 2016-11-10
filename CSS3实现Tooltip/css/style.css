@@ -1,0 +1,84 @@
+/*Global*/
+html{
+	width: 100%;
+	height: 100%;
+	text-size-adjust:none;/*屏幕旋转的时候不会变字体大小*/
+}
+body{
+	padding: 0;
+	margin:0;
+	width: 100%;
+	height: 100%;
+	background: #47c9af;
+	color: #74777b;
+	font-weight: 300;
+	font-size: 1.5em;
+	font-family: "Raleway","Arail";
+}
+ul{
+	list-style: none;
+	padding: 0;
+	margin:0;
+}
+a:link,a:visited,a:focus{
+	text-decoration: none;
+	outline: none;
+}
+*,*:after,*:before{
+	box-sizing: border-box;/*生成的内容不影响盒子大小*/
+	content: "";
+}
+*:after{clear: both;}
+
+/*nav*/
+.nav{
+	width: 800px;
+	height: 300px;
+	margin:200px auto;
+}
+.nav li{
+	display: inline-block;
+	margin:0 1em;
+}
+.tooltip{
+	display: inline-block;
+	font-weight: 700;
+	color: rgba(0,0,0,0.3);
+	padding: 0.15em 0.25em 0;
+	position: relative;
+	z-index: 1;
+}
+.tooltip-content{
+	position: absolute;
+	z-index: 2;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: #fff;
+	left: 50%;
+	margin-left: -40px;
+	bottom: 100%;
+	margin-bottom: 20px;
+	text-align: center;
+	padding-top: 25px;
+	color: #47c9af;
+}
+.tooltip-content::after{
+	display: block;
+	content: "";
+	width: 30px;
+	height: 20px;
+	background:url(../img/tooltip1.svg) no-repeat center center;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -15px;
+	margin-top: -7px;
+}
+.tooltip-effect-1 .tooltip-content{
+	transform: translate3d(0,10px,0) rotate3d(1,1,1,45deg);/*rotate3d中的xyz的系数是0~1之间，默认以图形中心为旋转中心*/
+	transform-origin: center bottom;/*设置以气泡尖为旋转中心。水平位置为中间，垂直位置为底部。这里因为可以设置具体的数值50% 100%*/
+}
+.tooltip-effect-1 .tooltip-content i{
+	transform: scale3d(0,0,1);
+}
