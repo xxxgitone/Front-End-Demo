@@ -1,0 +1,31 @@
+@charset "UTF-8";
+ul li a {
+  display: block;
+}
+
+body {
+  font-family: "微软雅黑";
+}
+
+ul li a {
+  display: block;
+  color: #ccc;
+  /*a的hover*/
+}
+ul li a:hover {
+  width: 100px;
+}
+
+a {
+  color: #ccc;
+}
+
+/*
+适配中文
+安装目录下\Koala\rubygems\gems\sass-3.4.9\lib\sass的engine.rb
+在
+Encoding.default_external = Encoding.find('utf-8')
+
+ */
+
+/*# sourceMappingURL=foundation.css.map */
