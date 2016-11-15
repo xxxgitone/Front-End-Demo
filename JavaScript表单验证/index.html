@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript表单验证</title>
+	<style type="text/css">
+		#pwdLvSpan{
+			display: inline-block;
+			width: 100px;
+			height: 5px;
+			background: #c3c3c3;
+		}
+		#pwdLvSpan i{
+			display: block;
+			background: green;
+			height: 5px;
+			width: 0;
+		}
+	</style>
+</head>
+<body>
+	<form action="" method="post">
+		<input type="hidden" id="errnum" name="" value="0">
+		<p>账户：<input type="text" name="" id="userid"></p>
+		<p>密码：<input type="text" name="" id="userpwd">密码强度<span id="pwdLvSpan"><i style="background: red;" id="pwdLv"></i></span></p>
+		<p>确认：<input type="text" name="" id="userpwd2"></p>
+		<p>
+			性别：
+			<input type="radio" name="sex" value="1" checked="checked">男
+			<input type="radio" name="sex" value="0">女
+		</p>
+		<p>
+			年龄：
+			<select name="" id="age">
+				<option value="0">请选择年龄段</option>
+				<option value="1">18岁以下</option>
+				<option value="2">18~25岁</option>
+				<option value="3">25~30岁</option>
+				<option value="4">30~40岁以下</option>
+				<option value="5">40以上</option>
+			</select>
+		</p>
+		<p>
+			爱好：
+			<input type="checkbox" name="like" value="1" class="like">上网
+			<input type="checkbox" name="like" value="2" class="like">逛街
+			<input type="checkbox" name="like" value="3" class="like">看电影
+			<input type="checkbox" name="like" value="4" class="like">其他
+		</p>
+		<p>简介：<textarea rows="4" cols="18" id="about"></textarea></p>
+		<p>
+			邮箱：<input type="text" name="" id="email">
+		</p>
+		<p>
+			<input type="submit" value="注册" id="regBtn" name="" onclick="return eg.regCheck()">
+			<input type="button" value="解锁" id="regUnlock" name="" onclick="eg.unlock();" style="display: none;">
+		</p>
+	</form>
+</body>
+<script type="text/javascript" src="index.js"></script>
+</html>
