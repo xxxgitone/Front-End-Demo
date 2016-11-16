@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAAA,OAAO;EACN,OAAO,EAAC,KAAK;;AAKd,IAAI;EACH,WAAW,EAAC,MAAM;;AAIjB,OAAC;EACA,OAAO,EAAC,KAAK;EACb,KAAK,EATD,IAAI;;EAYR,aAAO;IACN,KAAK,EAAC,KAAK;;AAMf,CAAC;EACA,KAAK,EApBC,IAAI",
+"sources": ["foundation.scss"],
+"names": [],
+"file": "foundation.css"
+}
