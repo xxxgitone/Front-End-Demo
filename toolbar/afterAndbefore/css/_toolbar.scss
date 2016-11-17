@@ -1,0 +1,163 @@
+
+$toolbar-size:52px; 
+
+.toolbar{
+	position:fixed;
+	left:50%;
+	bottom:5px;
+	margin-left:-$toolbar-size / 2;
+}
+.toolbar-item{
+	position: relative;
+	display: block;
+	margin-top:1px;
+	width: $toolbar-size;
+	height: $toolbar-size;
+
+	&:hover{
+		.toolbar-btn{
+			&:before{
+				top:-$toolbar-size;
+			}
+			&:after{
+				top:0;
+			}
+		}
+
+		&:after{
+			@include opacity(1);
+			@include scale(1);
+		}
+	}
+	
+	&:after{
+		content:'';
+		position: absolute;
+		right: $toolbar-size - 6;
+		bottom:-10px;
+		width:172px;
+		background-image: url("../img/toolbar_img.png");
+		background-repeat:no-repeat;
+		@include opacity(0);
+		@include transform-origin(95% 95%);
+		@include scale(0.01);
+		@include transition(all 0.7s);
+	}
+
+}
+.toolbar-layer-weixin{
+	&:after{
+		content:'';
+		background-position: 0 0;
+		height:212px;
+	}
+
+	.toolbar-btn{
+		@extend .icon-wechat;//继承index.scc
+		// &:before{
+		// 	content: "\e902";
+		// }
+
+		&:after{
+			content:'公众\A账号';
+		}
+	}
+}
+
+.toolbar-layer-app{
+	&:after{
+		content:'';
+		background-position: 0 -222px;
+		height:194px;
+	}
+
+	.toolbar-btn{
+		&:before{
+			content: "\e958";
+		}
+		&:after{
+			content:'app\A下载';
+		}
+	}
+}
+
+.toolbar-layer-feedback{
+	.toolbar-btn{
+		&:before{
+			content: "\e901";
+		}
+		&:after{
+			content:'意见\A反馈';
+		}
+	}
+}
+
+.toolbar-layer-top{
+	.toolbar-btn{
+		&:before{
+			content: "\e900";
+		}
+		&:after{
+			content:'返回\A顶部';
+		}
+	}
+}
+
+.toolbar-btn{
+	position: absolute;
+	left:0;
+	top:0;
+	overflow: hidden;
+	width: $toolbar-size;
+	height: $toolbar-size;
+		
+	@extend [class^="icon-"];	
+	// font-family: 'icomoon' !important;
+	// speak: none;
+	// font-style: normal;
+	// font-weight: normal;
+	// font-variant: normal;
+	// text-transform: none;
+	// line-height: 1;
+	// /* Better Font Rendering =========== */
+	// -webkit-font-smoothing: antialiased;
+	// -moz-osx-font-smoothing: grayscale; 
+	
+
+	&:before{//icon
+		content:'';
+		position: absolute;
+		left:0;
+		top:0;
+		width: $toolbar-size;
+		height: $toolbar-size;
+		background-color: #d0d6d9;
+		color:#fff;
+		text-align: center;
+		font-size:30px;
+		line-height:$toolbar-size;
+		@include transition(top 0.7s);
+	}
+
+	&:after{//text
+		content:'';
+		position: absolute;
+		left:0;
+		top:0;
+		top:$toolbar-size;
+		width: $toolbar-size;
+		height: $toolbar-size;
+		text-align: center;
+		background-color: #98a1a6;
+		padding-top:12px;
+		font-size:12px;
+		line-height:1.2;
+		color:#fff;
+		white-space: pre;//处理文字分行
+		@include transition(top 0.7s);
+	}
+
+}
+
+
+
