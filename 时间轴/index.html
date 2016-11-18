@@ -6,6 +6,20 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <!-- 影隐藏 -->
+    <div id="hide">
+        <!-- 模板 -->
+        <div id="tpl_scrubber_year">
+            <a href="javascript:;" class="scrubber_year current">{year}</a>
+            {list}
+        </div>
+        
+        <div id="tpl_scrubber_month">
+            <a href="javascript:;" class="scrubber_month">{month}月</a>
+        </div>
+    </div>
+    
+
     <div class="top"></div>
     <div class="header"></div>
     <div class="container">
@@ -53,8 +67,10 @@
             </div>
             
            
-
+        
         </div>
     </div>
+    <script type="text/javascript" src="script/data.js"></script>
+    <script type="text/javascript" src="script/getLunarDay.js"></script>
 </body>
 </html>
