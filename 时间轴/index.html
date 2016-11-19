@@ -10,22 +10,22 @@
     <div id="hide">
         <!-- 时间轴模板 -->
         <div id="tpl_scrubber_year">
-            <a href="javascript:;" class="scrubber_year current">{year}</a>
+            <a href="javascript:;" class="scrubber_year current" id="scrubber_year_{year}" onclick="show_year({year})">{year}</a>
             {list} <!-- 存放月份 -->
         </div>
         
         <div id="tpl_scrubber_month">
-            <a href="javascript:;" class="scrubber_month">{month}月</a>
+            <a href="javascript:;" class="scrubber_month scrubber_month_in_{year}" id="scrubber_month_{year}_{month}" onclick="show_month({year},{month})">{month}月</a>
         </div>
 
         <!-- 日志模板 -->
          <div id="tpl_content_year">
-            <div class="content_year">{year}</div>
+            <div class="content_year" id="content_year_{year}">{year}</div>
             {list} <!-- 存放月份 -->
         </div>
         
         <div id="tpl_content_month">
-            <div class="content_month">{month}月</div>
+            <div class="content_month" id="content_month_{year}_{month}">{month}月</div>
             {list}<!-- 存放日志 -->
         </div>
         
@@ -54,7 +54,6 @@
                 </div>
                 <div class="content_item_footer">
                     <div class="content_item_footer_info">
-                        
                         <a href="javascript:;" title="赞"><i class="icon_zan"></i>({like})</a>
                         <a href="javascript:;" title="评论"><i class="icon_pin"></i>({comment})</a>
                     </div>
@@ -64,7 +63,6 @@
                 </div>
             </div>
         </div>
-     
     </div>
     
 
@@ -122,6 +120,7 @@
     </div>
     <script type="text/javascript" src="script/data.js"></script>
     <script type="text/javascript" src="script/getLunarDay.js"></script>
+    <script type="text/javascript" src="script/fx.js"></script>
     <script type="text/javascript" src="script/index.js"></script>
 </body>
 </html>
