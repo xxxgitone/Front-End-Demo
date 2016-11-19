@@ -8,27 +8,77 @@
 <body>
     <!-- 影隐藏 -->
     <div id="hide">
-        <!-- 模板 -->
+        <!-- 时间轴模板 -->
         <div id="tpl_scrubber_year">
             <a href="javascript:;" class="scrubber_year current">{year}</a>
-            {list}
+            {list} <!-- 存放月份 -->
         </div>
         
         <div id="tpl_scrubber_month">
             <a href="javascript:;" class="scrubber_month">{month}月</a>
         </div>
+
+        <!-- 日志模板 -->
+         <div id="tpl_content_year">
+            <div class="content_year">{year}</div>
+            {list} <!-- 存放月份 -->
+        </div>
+        
+        <div id="tpl_content_month">
+            <div class="content_month">{month}月</div>
+            {list}<!-- 存放日志 -->
+        </div>
+        
+        <div id="tpl_content_item">
+            <div class="content_item content_item_{position} {isFirst}">
+                <div class="content_item_icon_arrow"></div>
+                <div class="content_item_icon_dot">
+                    <div class="content_item_icon_dot_child"></div>
+                </div>
+
+                <div class="content_item_head">
+                    <div class="content_item_head_title">
+                        <div class="content_item_head_title_lunar">
+                            {lunar}
+                        </div>
+                        {date}
+                    </div>
+                    <div class="content_item_head_intorduce">
+                        <i class="ui_icon quote_before"></i>
+                            {intro}
+                        <i class="ui_icon quote_after"></i>
+                    </div>   
+                </div>
+                <div class="content_item_media">
+                    {media}
+                </div>
+                <div class="content_item_footer">
+                    <div class="content_item_footer_info">
+                        
+                        <a href="javascript:;" title="赞"><i class="icon_zan"></i>({like})</a>
+                        <a href="javascript:;" title="评论"><i class="icon_pin"></i>({comment})</a>
+                    </div>
+                    <div class="content_item_footer_like">
+                        {like_format}人觉得很赞
+                    </div>
+                </div>
+            </div>
+        </div>
+     
     </div>
     
 
     <div class="top"></div>
     <div class="header"></div>
     <div class="container">
-        <div class="scrubber">
+        <div class="scrubber" id="scrubber">
             <a href="javascript:;" class="scrubber_year current">2016</a>
             <a href="javascript:;" class="scrubber_month">11</a>
             <a href="javascript:;" class="scrubber_day">17</a>
         </div>
-        <div class="content">
+        <div class="content" id="content">
+
+
             <div class="content_year">2016</div>
             <div class="content_month">11月</div>
             
@@ -72,5 +122,6 @@
     </div>
     <script type="text/javascript" src="script/data.js"></script>
     <script type="text/javascript" src="script/getLunarDay.js"></script>
+    <script type="text/javascript" src="script/index.js"></script>
 </body>
 </html>

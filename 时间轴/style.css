@@ -75,6 +75,16 @@ body{
 	left: -90px;
 	clear: both;
 }
+/*每个月第一条日志*/
+.content .first{
+	margin-top: -20px;
+}
+.content_item_left{
+	float: left;
+}
+.content_item_right{
+	float: right;
+}
 .content_item{
 	width: 370px;
 	min-height: 300px;
@@ -102,6 +112,10 @@ body{
 	left: -43px;
 	top: 25px;
 	background: #fff;
+}
+/*右列的点重新设置偏移*/
+.content_item_right .content_item_icon_dot{
+	left: -443px;
 }
 .content_item_icon_dot_child{
 	width: 7px;
