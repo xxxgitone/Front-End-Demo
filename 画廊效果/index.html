@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>画廊</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body onselectstart="return false;"><!-- 不能选择 -->
+
+	<!-- 2.改写视图，为模板字符串 -->
+	<div class="wrap" id="wrap">
+	
+		<!-- photo负责平移,旋转 -->
+		<div class="photo photo_front" onclick="turn(this);" id="photo_{{index}}">
+
+			<div class="photo_wrap"><!-- photo_wrap负责3D的翻转 （正反面）-->
+				<div class="side side-front">
+					<p class="image"><img src="images/{{img}}"></p>
+					<p class="caption">{{caption}}</p>
+				</div>
+				<div class="side side-back">
+					<p class="desc">{{desc}}</p>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	
+	<!-- <div class="wrap" >
+	
+		photo负责平移,旋转
+		<div class="photo photo_center photo_front" onclick="turn(this);" >
+	
+			<div class="photo_wrap">photo_wrap负责3D的翻转 （正反面）
+				<div class="side side-front">
+					<p class="image"><img src="images/1 左耳.jpg"></p>
+					<p class="caption">左耳</p>
+				</div>
+				<div class="side side-back">
+					<p class="desc">描述信息</p>
+				</div>
+			</div>
+	
+		</div>
+	
+	</div> -->
+
+</body>
+<script type="text/javascript" src="scripts/data.js"></script>
+<script type="text/javascript" src="scripts/index.js"></script>
+</html>
