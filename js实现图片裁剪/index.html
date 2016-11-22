@@ -19,6 +19,8 @@
 		.down{left: 50%;margin-left: -4px;bottom: -4px;cursor: s-resize;}
 		.left_down{left: -4px;bottom: -4px;cursor: sw-resize;}
 		.left{left: -4px;top: 50%;margin-top: -4px;cursor: w-resize;}
+		#preview{position: absolute;width: 460px;height: 360px;top: 100px;left:670px;}
+		#preview img{position: absolute;}
 	</style>
 </head>
 <body>
@@ -26,16 +28,21 @@
 		<img src="img/1.jpg" id="img1">
 		<img src="img/1.jpg" id="img2">
 		<div id="main">
-			<div class="minDiv left_up"></div>
-			<div class="minDiv up"></div>
-			<div class="minDiv right_up"></div>
-			<div class="minDiv right" id="right"></div>
-			<div class="minDiv right_down"></div>
-			<div class="minDiv down"></div>
-			<div class="minDiv left_down"></div>
-			<div class="minDiv left"></div>
+			<div id="left_up" class="minDiv left_up"></div>
+			<div id="up" class="minDiv up"></div>
+			<div id="right_up" class="minDiv right_up"></div>
+			<div id="right" class="minDiv right"></div>
+			<div id="right_down" class="minDiv right_down"></div>
+			<div id="down" class="minDiv down"></div>
+			<div id="left_down" class="minDiv left_down"></div>
+			<div id="left" class="minDiv left"></div>
 		</div>
 	</div>
+	<div id="preview">
+		<img id="img3" src="img/1.jpg">
+	</div>
 </body>
+<script type="text/javascript" src="scripts/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui-1.10.4.custom.min.js"></script>
 <script type="text/javascript" src="scripts/index.js"></script>
 </html>
