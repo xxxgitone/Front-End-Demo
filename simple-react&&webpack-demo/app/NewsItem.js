@@ -5,6 +5,7 @@ import ImageGrayArrow from './grayarrow.gif';
 import Moment from 'moment';
 
 export default class NewsItem extends React.Component {
+	
 	getDomain() {
  		return URL.parse(this.props.item.url).hostname;
 	}
