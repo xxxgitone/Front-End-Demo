@@ -1,0 +1,88 @@
+@import url("http://fonts.googleapis.com/css?family=Sniglet");
+ 
+
+* {margin: 0; 
+	padding: 0; 
+	box-sizing: border-box;}
+ 
+body {
+    padding-top: 100px;
+    background: hsl(120, 40%, 40%);
+    font-family: Sniglet;
+}
+main {
+    width: 500px; 
+    margin: 0 auto; 
+    padding-bottom: 10px;
+    background: white; 
+    border-radius: 3px; 
+    overflow: hidden;
+}
+h1 {
+    font-size: 24px; 
+    font-weight: normal;
+    background: hsl(120, 40%, 95%); 
+    color: hsl(120, 40%, 40%);
+    text-align: center; 
+    padding: 20px 0;
+    margin-bottom: 40px;
+}
+ 
+.flp {
+	padding: 0 50px;
+}
+/*Let's place the label over the input*/
+.flp div {
+	position: relative; 
+	margin-bottom: 30px;
+}
+ 
+.flp input, .flp label {
+    width: 400px; 
+    display: block;
+    font: inherit; 
+    font-size: 16px; 
+    line-height: 24px;
+    height: 46px;
+    border: 1px solid #999;
+}
+.flp input {
+	padding: 10px; 
+	outline: none; 
+	border-radius: 3px;}
+.flp label {
+    position: absolute; 
+    left: 0; 
+    top: 0;
+    padding: 10px 8px;
+    border-color: transparent; 
+    color: #666;
+    cursor: text;
+}
+ 
+/*label styles*/
+.ch {
+    display: block; float: left;
+    position: relative; 
+    background: white; 
+}
+.ch:first-child {
+	padding-left: 2px;
+}
+.ch:last-child {
+	padding-right: 2px;
+}
+ 
+/*active input label*/
+.focussed {
+    /*none：
+    元素永远不会成为鼠标事件的target。但是，当其后代元素的pointer-events属性指定其他值时，
+    鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶触发父元素的事件侦听器。
+	顾名思意，就是鼠标事件拜拜的意思
+
+	除了指定元素不成为鼠标事件的目标，none值还指示鼠标事件穿过该元素，并指向位于元素下面的元素
+    */
+    pointer-events: none;
+}
+ 
+
