@@ -17,7 +17,7 @@ body{
 	font-size: 16px;
 }
 div.contains{
-	width: 580px;
+	width: 600px;
 	margin:120px auto;
 	position: relative;
 }
@@ -42,7 +42,7 @@ div.contains{
 .contains p{
 	color: #ff6eff;
 	font-size: 18px;
-	width: 300px;
+	width: 350px;
 	position: absolute;
 	left: 28%;
 	top: 100%;
@@ -63,7 +63,7 @@ div.contains{
 	width:360px;
 	position: absolute;
 	left: 20%;
-	top: 130%;
+	top: 140%;
 	animation: movedownP 0.6s ease-in-out 0.2s;
 }
 @keyframes movedownLink{
