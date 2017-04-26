@@ -6,13 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <title>datepicker</title>
+    <style>
+        .datepicker {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 5px;
+            height: 24px;
+            line-height: 24px;
+            width: 230px;
+        }
+
+        .datepicker:focus {
+            outline: 0 none;
+            border: 1px solid #1abc9c;
+        }
+    </style>
 </head>
 <body>
-    <div class="ui-datepick-wrapper">
-        <div class="ui-datepick-header">
+    <input type="text" class="datepicker">
+
+
+    <!--<div class="ui-datepick-wrapper">-->
+        <!--<div class="ui-datepick-header">
             <a href="#" class="ui-datepicker-btn ui-datepicker-prev-btn ">&lt;</a>
             <a href="#" class="ui-datepicker-btn ui-datepicker-next-btn">&gt;</a>
-            <span class="ui-datapicker-curr-month">2016-12</span>
+            <span class="ui-datepicker-curr-month">2016-12</span>
         </div>
         <div class="ui-datepick-body">
             <table>
@@ -75,7 +93,15 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
-    </div>
+        </div>-->
+    <!--</div>-->
+    <script src="./data.js"></script>
+    <script src="./main.js"></script>
+    <script>
+        // const monthData = datepicker.getMonthData(2016, 12)
+        // console.log(monthData);
+
+        datepicker.init('.datepicker');
+    </script>
 </body>
 </html>
