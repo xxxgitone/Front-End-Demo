@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .loading {
+         width: 100%;
+         height: 100%;
+         position: fixed;
+         top: 0;
+         left: 0;
+         z-index: 100;
+         background: white;
+     }
+
+     .loading .pic {
+         width: 0;
+         height: 5px;
+         position: absolute;
+         top: 0;
+         left: 0;
+         background: #f33;
+     }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="loading">
+        <div class="pic">         
+        </div>
+    </div>
+    <header>
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1499180998745&di=d06c9997965342940135d99713b53de2&imgtype=0&src=http%3A%2F%2Fc.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2Fe850352ac65c1038a1be9294b4119313b17e89a0.jpg">
+    </header>
+
+    <script>
+        $('.pic').animate({width: '20%'}, 100)
+    </script>
+
+    <section>
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1499181152348&di=39df5c59a62056608e29a24fddd49086&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue%252C0%252C0%252C245%252C40%2Fsign%3D8737aecb5d2c11dfcadcb7600b4e08a5%2F6a600c338744ebf8ffa20d17d3f9d72a6159a7c3.jpg">
+    <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1630533010,2520209494&fm=26&gp=0.jpg">
+    <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3380823308,714726335&fm=26&gp=0.jpg">
+    </section>
+
+    <script>
+        $('.pic').animate({width: '50%'}, 100)
+    </script>
+
+    <section>
+        <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=901525069,2983715071&fm=26&gp=0.jpg">
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1499181275338&di=6af51f7bdf9be3a958c18414f5aa8488&imgtype=0&src=http%3A%2F%2Fimg05.tooopen.com%2Fimages%2F20140604%2Fsy_62334334138.jpg">
+    </section>
+    <script>
+        $('.pic').animate({width: '75%'}, 100)
+    </script>
+    <section>
+         <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1499181299996&di=09d5cbeec921d0be2633588609fe4397&imgtype=0&src=http%3A%2F%2Fimgb.mumayi.com%2Fandroid%2Fwallpaper%2F2012%2F03%2F04%2F2012030401533224554937.jpg">
+    </section>
+    <section>
+        <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3703268988,3304460206&fm=26&gp=0.jpg">
+    </section>
+    <script>
+        $('.pic').animate({width: '90%'}, 100)
+    </script>
+    <footer>
+         <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1499776174&di=3ca6ac90f68bc8c1c6821f7370846fa2&imgtype=jpg&er=1&src=http%3A%2F%2Fwww.qqjia.com%2Fz%2F11%2Ftu13263_5.jpg">  
+    </footer>
+
+    <script>
+        $('.pic').animate({width: '100%'}, 100, function () {
+            $('.loading').fadeOut()
+        })
+    </script>
+</body>
+</html>
